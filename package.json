@@ -10,6 +10,13 @@
     "./src/lock.js": "./src/lock-memory.js",
     "./src/default-options.js": "./src/default-options-browser.js"
   },
+  "react-native": {
+    "rimraf": false,
+    "datastore-fs": "datastore-level",
+    "leveldown": "asyncstorage-down",
+    "./src/lock.js": "./src/lock-memory.js",
+    "./src/default-options.js": "./src/default-options-reactnative.js"
+  },
   "scripts": {
     "test": "aegir test",
     "test:node": "aegir test --target node",
@@ -55,6 +62,7 @@
   },
   "dependencies": {
     "async": "^2.6.0",
+    "asyncstorage-down": "^4.0.1",
     "base32.js": "~0.1.0",
     "big.js": "^5.0.3",
     "cids": "~0.5.3",
